@@ -1298,7 +1298,7 @@ exports.specialPrescription = function(data, options) {
 		})
 		.then(input => {
 			return helper.text(input.doc, {
-				txtArray: ['____________________________________', '         (assinatura do emissor do recibo)'],
+				txtArray: ['____________________________________', '                  (assinatura e carimbo)'],
 				x: (settings.leftMargin + 98) * wConverter,
 				fontSize: 14 * hConverter,
 				fontFamily: 'times',
@@ -1336,6 +1336,84 @@ exports.specialPrescription = function(data, options) {
 				style: {
 					borderColor: settings.borderColor
 				},
+			})
+		})
+
+		.then(input => {
+			return helper.text(input.doc, {
+				txtArray: ['Nome:  __________________________________'],
+				x: (settings.leftMargin + 3) * wConverter,
+				fontSize: 12 * hConverter,
+				fontFamily: 'times',
+				fontStyle: 'normal',
+				y: (settings.topMargin + 213) * hConverter,
+
+			})
+		})
+		.then(input => {
+			return helper.text(input.doc, {
+				txtArray: ['            __________________________________'],
+				x: (settings.leftMargin + 3) * wConverter,
+				fontSize: 12 * hConverter,
+				fontFamily: 'times',
+				fontStyle: 'normal',
+				y: (settings.topMargin + 222) * hConverter,
+
+			})
+		})
+		.then(input => {
+			return helper.text(input.doc, {
+				txtArray: ['Ident:   __________________ Org. Em.:_______'],
+				x: (settings.leftMargin + 3) * wConverter,
+				fontSize: 12 * hConverter,
+				fontFamily: 'times',
+				fontStyle: 'normal',
+				y: (settings.topMargin + 231) * hConverter,
+
+			})
+		})
+		.then(input => {
+			return helper.text(input.doc, {
+				txtArray: ['Endereço: _____________________________'],
+				x: (settings.leftMargin + 3) * wConverter,
+				fontSize: 12 * hConverter,
+				fontFamily: 'times',
+				fontStyle: 'normal',
+				y: (settings.topMargin + 240) * hConverter,
+
+			})
+		})
+		.then(input => {
+			return helper.text(input.doc, {
+				txtArray: ['                    _____________________________'],
+				x: (settings.leftMargin + 3) * wConverter,
+				fontSize: 12 * hConverter,
+				fontFamily: 'times',
+				fontStyle: 'normal',
+				y: (settings.topMargin + 249) * hConverter,
+
+			})
+		})
+		.then(input => {
+			return helper.text(input.doc, {
+				txtArray: ['Cidade:  _____________________ UF:_______'],
+				x: (settings.leftMargin + 3) * wConverter,
+				fontSize: 12 * hConverter,
+				fontFamily: 'times',
+				fontStyle: 'normal',
+				y: (settings.topMargin + 258) * hConverter,
+
+			})
+		})
+		.then(input => {
+			return helper.text(input.doc, {
+				txtArray: ['Telefone:_______________________________'],
+				x: (settings.leftMargin + 3) * wConverter,
+				fontSize: 12 * hConverter,
+				fontFamily: 'times',
+				fontStyle: 'normal',
+				y: (settings.topMargin + 267) * hConverter,
+
 			})
 		})
 		.then(input => {
