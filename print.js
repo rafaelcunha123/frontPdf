@@ -322,7 +322,8 @@ exports.receipt = function(data, options) {
 		leftMargin: 10,
 		topMargin: 10,
 	}
-
+	console.log('data', data)
+	console.log('path', R.path(['contractor', 'cnpj'], data))
 
 
 	return helper.text(doc, {
@@ -357,7 +358,7 @@ exports.receipt = function(data, options) {
 					padding: settings.headerPadding,
 				},
 				content: {
-					text: R.path(['contractor', 'cnpj'], data) ? data.contractor.cnpj : (data.contractor.cpf ? data.contractor.cpf : ''),
+					text: R.path(['contractor', 'cnpj'], data) ? data.contractor.cnpj : (R.path(['contractor', 'cpf'], data) ? data.contractor.cpf : ''),
 					fontSize: settings.contentFontSize,
 					fontStyle: settings.contentFontStyle,
 					fontFamily: settings.contentFont,
@@ -500,7 +501,7 @@ exports.receipt = function(data, options) {
 					padding: settings.headerPadding,
 				},
 				content: {
-					text: R.path(['patient', 'cnpj'], data) ? data.patient.cnpj : (data.patient.cpf ? data.patient.cpf : ''),
+					text: R.path(['patient', 'cnpj'], data) ? data.patient.cnpj : (R.path(['patient', 'cpf'], data)? data.patient.cpf : ''),
 					fontSize: settings.contentFontSize,
 					fontStyle: settings.contentFontStyle,
 					fontFamily: settings.contentFont,
@@ -1030,3 +1031,4 @@ exports.receipt = function(data, options) {
 
 	.then(helper.saveDoc)
 }
+

@@ -60,8 +60,9 @@ const receipt = {
 	receiptNumber: '588814da0211673702d9067c',
 }
 
-print.receipt(receipt)
+print.receipt({})
 	.then(input => console.log('done.'))
 .catch(e=>{
 	console.log(e)
 })
+
