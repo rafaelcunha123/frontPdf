@@ -216,6 +216,46 @@ function saveDoc(input) {
 }
 
 
+function paginateString(string, maxLineSize) {
+	const spaceSplit = string.replace( /\n/g, " $newline " ).split( " " )
+	const validArray = []
+	const resultArray = []
+	spaceSplit.forEach((word) => {
+		let substringSize = 0
+		word.split('').reduce((acc, curr, index) => {
+			if (substringSize >= maxLineSize) {
+				substringSize = 0
+				validArray.push(acc)
+				return acc = ''
+			} else {
+				if(index === word.length-1) validArray.push(acc + curr)
+				substringSize = (acc.length) + 1
+				return acc = acc + curr
+			}
+
+		}, '')
+	})
+
+	const reduction = validArray.reduce((acc, curr, index)=>{
+		let lineSize = acc.length + curr.length +1
+			
+		if(curr === '$newline'){
+			resultArray.push(acc)
+			return acc =""
+		}
+		if(lineSize >= maxLineSize){
+			resultArray.push(acc)
+			return acc = curr
+		} else {
+			if(index === validArray.length -1) resultArray.push(acc + ' ' + curr)
+			return acc = acc.length>0 ?  acc + ' ' + curr : curr
+		}
+
+	})
+
+	return resultArray
+
+}
 
 function clone(array) {
 	if (Array.isArray(array)) return array.slice(0)
@@ -227,4 +267,5 @@ module.exports = {
 	print,
 	saveDoc,
 	formBox,
+	paginateString
 }

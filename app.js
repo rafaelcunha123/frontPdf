@@ -60,9 +60,30 @@ const receipt = {
 	receiptNumber: '588814da0211673702d9067c',
 }
 
-print.receipt({})
+/*print.receipt({})
+	.then(input => console.log('done.'))
+.catch(e=>{
+	console.log(e)
+})*/
+
+
+const spReceipt = {
+	issuer:{
+		name: 'Nam Jin Kim',
+		associationData: 'CRM/SP 65985-2',
+		address: 'Av. Raimundo Pereira de Magalhães, 12367 - Pirituba, São Paulo - SP, 02938-000',
+		phone: '(11) 3326-5698'
+	},
+	patient:{
+		name: 'Rafael Souza da Cunha ',
+		address: 'Av. Raimundo Pereira de Magalhães, 12367 - Pirituba, São Paulo - SP, 02938-000 Av. Raimundo Pereira de Magalhães, 12367 - Pirituba, São Paulo - SP, 02938-000Av. Raimundo Pereira de Magalhães, 12367 - Pirituba, São Paulo - SP, 02938-000'
+	},
+	prescription: 'Prescrevo um monte de \n medicamentos \n legais para o paciente. Quando ele tomar tudo, vai ficar bem louco e ver estrela. Uma hora eu canso de escrever, mas enquanto isso, vou prescrever pra caralho ate dar overdose no brother.\nPedrao ze ruela nao tem ideia do trampo que da pra fazer ess poha dar newline'
+
+}
+
+print.specialPrescription(spReceipt, {size: 'a6'})
 	.then(input => console.log('done.'))
 .catch(e=>{
 	console.log(e)
 })
-
