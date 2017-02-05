@@ -60,14 +60,14 @@ const receipt = {
 	receiptNumber: '588814da0211673702d9067c',
 }
 
-/*print.receipt({})
+/*print.receipt(receipt)
 	.then(input => console.log('done.'))
 .catch(e=>{
 	console.log(e)
 })*/
 
 
-const spReceipt = {
+const spPrescription = {
 	issuer:{
 		name: 'Nam Jin Kim',
 		associationData: 'CRM/SP 65985-2',
@@ -82,7 +82,29 @@ const spReceipt = {
 
 }
 
-print.specialPrescription(spReceipt, {size: 'a6'})
+/*print.prescription(spPrescription, {size: 'a6'})
+	.then(input => console.log('done.'))
+.catch(e=>{
+	console.log(e)
+})*/
+
+
+const atest = {
+	issuer:{
+		name: 'Nam Jin Kim',
+		associationData: 'CRM/SP 65985-2',
+		address: 'Av. Raimundo Pereira de Magalhães, 12367 - Pirituba, São Paulo - SP, 02938-000',
+		phone: '(11) 3326-5698'
+	},
+	patient:{
+		name: 'Rafael Souza da Cunha ',
+		address: 'Av. Raimundo Pereira de Magalhães, 12367 - Pirituba, São Paulo - SP, 02938-000 Av. Raimundo Pereira de Magalhães, 12367 - Pirituba, São Paulo - SP, 02938-000Av. Raimundo Pereira de Magalhães, 12367 - Pirituba, São Paulo - SP, 02938-000'
+	},
+	atestado: 'Atesto que o paciente zé ruela ta fodido e vai morrer se comparecer ao trabalho  no dida de dia de no dia de hoje'
+
+}
+
+print.atestado(atest)
 	.then(input => console.log('done.'))
 .catch(e=>{
 	console.log(e)
