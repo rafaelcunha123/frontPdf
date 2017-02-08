@@ -9,16 +9,16 @@ const schedule = {
 	speciality: 'Dermatologista com especialidade muito muito longa',
 	patient: 'Sandra Oliver Ferreira de Souza',
 	insurance: 'Porto Seguro Seguradora de Saúde',
-	recommendations: 'Av. Raimundo Pereira de Magalhães, 12367 - Pirituba, São Paulo - SP, 02938-000 rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa - SP, 02938-000 rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa',
+	recommendations: 'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam congue congue magna et sagittis. Mauris ornare nisi nec arcu elementum, in dignissim tortor ornare. Cras ac eleifend orci. Vestibulum porttitor purus risus, quis sollicitudin lorem ultricies eu. In eu quam ex. Ut laoreet nulla vel condimentum tempus. Curabitur imperdiet volutpat lectus quis vulputate. Aliquam porta magna orci, sit amet porttitor sapien placerat et. Vestibulum leo nibh, sollicitudin et iaculis aliquet, efficitur ac risus. Nam sollicitudin arcu ut tellus pharetra consectetur. \n Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam congue congue magna et sagittis. Mauris ornare nisi nec arcu elementum, in dignissim tortor ornare. Cras ac eleifend orci. Vestibulum porttitor purus risus, quis sollicitudin lorem ultricies eu. In eu quam ex. Ut laoreet nulla vel condimentum tempus. Curabitur imperdiet volutpat lectus quis vulputate. Aliquam porta magna orci, sit amet porttitor sapien placerat et. Vestibulum leo nibh, sollicitudin et iaculis aliquet, efficitur ac risus. Nam sollicitudin arcu ut tellus pharetra consectetur.\n \n Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam congue congue magna et sagittis. Mauris ornare nisi nec arcu elementum, in dignissim tortor ornare. Cras ac eleifend orci. Vestibulum porttitor purus risus, quis sollicitudin lorem ultricies eu. In eu quam ex. Ut laoreet nulla vel condimentum tempus. Curabitur imperdiet volutpat lectus quis vulputate. Aliquam porta magna orci, sit amet porttitor sapien placerat et. Vestibulum leo nibh, sollicitudin et iaculis aliquet, efficitur ac risus. Nam sollicitudin arcu ut tellus pharetra consectetur. \n \n Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam congue congue magna et sagittis. Mauris ornare nisi nec arcu elementum, in dignissim tortor ornare. Cras ac eleifend orci. Vestibulum porttitor purus risus, quis sollicitudin lorem ultricies eu. In eu quam ex. Ut laoreet nulla vel condimentum tempus. Curabitur imperdiet volutpat lectus quis vulputate. Aliquam porta magna orci, sit amet porttitor sapien placerat et. Vestibulum leo nibh, sollicitudin et iaculis aliquet, efficitur ac risus. Nam sollicitudin arcu ut tellus pharetra consectetur.',
 	address: 'Av. Raimundo Pereira de Magalhães, 12367 - Pirituba, São Paulo - SP, 02938-000 rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa - SP, 02938-000 rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa rafa ',
 }
 
-/*print.scheduleProtocol(schedule, {
+print.scheduleProtocol(schedule, {
 	size: 'a4'
 }).then(input => console.log('done.'))
 .catch(e=>{
 	console.log(e)
-})*/
+})
 
 const receipt = {
 	contractor:{
@@ -37,8 +37,8 @@ const receipt = {
 	},
 	procedures:[{
 		date: '31-01-2017',
-		procedureName: 'Consulta em consultório (no horário normal ou preestabelecido)',
-		value: 'R$ 400,00',
+		procedureName: 'Consulta em consultório (no horário normal ou preestabelecido) jfldksajf akldjflkasçdjf dhgfiyhruwo Consulta em consultório (no horário normal ou preestabelecido) jfldksajf akldjflkasçdjf dhgfiyhruwo',
+		value: 'R$ 40,00',
 	},{
 		date: '01-03-2017',
 		procedureName: 'Consulta em consultório (no horário normal ou preestabelecido)',
@@ -76,18 +76,18 @@ const spPrescription = {
 	},
 	patient:{
 		name: 'Rafael Souza da Cunha ',
-		address: 'Av. Raimundo Pereira de Magalhães, 12367 - Pirituba, São Paulo - SP, 02938-000 Av. Raimundo Pereira de Magalhães, 12367 - Pirituba, São Paulo - SP, 02938-000Av. Raimundo Pereira de Magalhães, 12367 - Pirituba, São Paulo - SP, 02938-000'
+		address: 'Av. Raimundo Pereira de Magalhães, 12367 - Pirituba, São Paulo - SP, 02938-000 Av. Raimundo Pereira de Magalhães, 12367 - Pirituba, São Paulo - SP, 02938-000 fhdjka'
 	},
-	prescription: 'Prescrevo um monte de \n medicamentos \n legais para o paciente. Quando ele tomar tudo, vai ficar bem louco e ver estrela. Uma hora eu canso de escrever, mas enquanto isso, vou prescrever pra caralho ate dar overdose no brother.\nPedrao ze ruela nao tem ideia do trampo que da pra fazer ess poha dar newline'
+	prescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi efficitur eros quam, non viverra augue egestas nec. Nam consectetur diam purus, sit amet dapibus libero facilisis quis. Donec sit amet tincidunt lectus, quis venenatis metus. Sed vestibulum tincidunt efficitur. In sed pharetra lacus. Aenean malesuada ultricies mauris, at sagittis erat vulputate sed. Etiam sit amet justo sit amet sem egestas varius nec quis magna. Duis a turpis volutpat diam fringilla porta vitae vel dolor. Ut aliquet feugiat arcu, ac pellentesque sapien placerat eget. Fusce ornare vitae tortor sed efficitur. Phasellus sodales elit quis ex varius, et vestibulum nunc convallis. Praesent nec felis lacinia, pharetra urna id, imperdiet mauris. Maecenas tortor felis, dignissim a quam vitae, dictum sollicitudin velit. Morbi molestie nulla finibus, vulputate tellus sit amet, accumsan arcu. \nQuisque mollis risus erat, vel luctus metus auctor vel. Pellentesque posuere massa a risus maximus vehicula. Proin lacinia urna vel ligula ornare, nec laoreet est eleifend. Quisque sit amet lectus ornare justo laoreet finibus at sit amet justo. Cras a augue sed lectus elementum sollicitudin. Vestibulum vitae arcu ac nisi blandit sagittis sed non ex. Pellentesque erat nunc, condimentum quis dignissim eget, vestibulum vel tortor. Nam id gravida massa, in varius dui. Pellentesq. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi efficitur eros quam, non viverra augue egestas nec. Nam consectetur diam purus, sit amet dapibus libero facilisis quis. Donec sit amet tincidunt lectus, quis venenatis metus. Sed vestibulum tincidunt efficitur. In sed pharetra lacus. Aenean malesuada ultricies mauris, at sagittis erat vulputate sed. Etiam sit amet justo sit amet sem egestas varius nec quis magna. Duis a turpis volutpat diam fringilla porta vitae vel dolor. Ut aliquet feugiat arcu, ac pellentesque sapien placerat eget. Fusce ornare vitae tortor sed efficitur. Phasellus sodales elit quis ex varius, et vestibulum nunc convallis. Praesent nec felis lacinia, pharetra urna id, imperdiet mauris. Maecenas tortor felis, dignissim a quam vitae, dictum sollicitudin velit. Morbi molestie nulla finibus, vulputate tellus sit amet, accumsan arcu. \nQuisque mollis risus erat, vel luctus metus auctor vel. Pellentesque posuere massa a risus maximus vehicula. Proin lacinia urna vel ligula ornare, nec laoreet est eleifend. Quisque sit amet lectus ornare justo laoreet finibus at sit amet justo. Cras a augue sed lectus elementum sollicitudin. Vestibulum vitae arcu ac nisi blandit sagittis sed non ex. Pellentesque erat nunc, condimentum quis dignissim eget, vestibulum vel tortor. Nam id gravida massa, in varius dui. Pellentesq'
 
 }
 
-/*print.prescription(spPrescription, {size: 'a6'})
+/*print.specialPrescription(spPrescription, {size: 'a6'})
 	.then(input => console.log('done.'))
 .catch(e=>{
 	console.log(e)
-})*/
-
+})
+*/
 
 const atest = {
 	issuer:{
@@ -98,14 +98,14 @@ const atest = {
 	},
 	patient:{
 		name: 'Rafael Souza da Cunha ',
-		address: 'Av. Raimundo Pereira de Magalhães, 12367 - Pirituba, São Paulo - SP, 02938-000 Av. Raimundo Pereira de Magalhães, 12367 - Pirituba, São Paulo - SP, 02938-000Av. Raimundo Pereira de Magalhães, 12367 - Pirituba, São Paulo - SP, 02938-000'
+		address: 'Av. Raimundo Pereira de Magalhães, 12367 - Pirituba, São Paulo - SP, 02938-000 Av. Raimundo Pereira de Magalhães, 12367 - Pirituba, São Paulo - SP, 02938-000 Av. Raimundo Pereira de Magalhães, 12367 - Pirituba, São Paulo - SP, 02938-000'
 	},
-	atestado: 'Atesto que o paciente zé ruela ta fodido e vai morrer se comparecer ao trabalho  no dida de dia de no dia de hoje e lalalal lalhdjfha hjldhf adjhfljas dfjhdsdjlahf dalsfhjlasdhd fjsdahd hjdhfljkahdfjkgdgauihfdjakhf akjsdhfkjlashdfaslkjdhfkjl '
+	atestado: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi efficitur eros quam, non viverra augue egestas nec. Nam consectetur diam purus, sit amet dapibus libero facilisis quis. Donec sit amet tincidunt lectus, quis venenatis metus. Sed vestibulum tincidunt efficitur. In sed pharetra lacus. Aenean malesuada ultricies mauris, at sagittis erat vulputate sed. Etiam sit amet justo sit amet sem egestas varius nec quis magna. Duis a turpis volutpat diam fringilla porta vitae vel dolor. Ut aliquet feugiat arcu, ac pellentesque sapien placerat eget. Fusce ornare vitae tortor sed efficitur. Phasellus sodales elit quis ex varius, et vestibulum nunc convallis. Praesent nec felis lacinia, pharetra urna id, imperdiet mauris. Maecenas tortor felis, dignissim a quam vitae, dictum sollicitudin velit. Morbi molestie nulla finibus, vulputate tellus sit amet, accumsan arcu. \nQuisque mollis risus erat, vel luctus metus auctor vel. Pellentesque posuere massa a risus maximus vehicula. Proin lacinia urna vel ligula ornare, nec laoreet est eleifend. Quisque sit amet lectus ornare justo laoreet finibus at sit amet justo. Cras a augue sed lectus elementum sollicitudin. Vestibulum vitae arcu ac nisi blandit sagittis sed non ex. Pellentesque erat nunc, condimentum quis dignissim eget, vestibulum vel tortor. Nam id gravida massa, in varius dui. Pellentesq. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi efficitur eros quam, non viverra augue egestas nec. Nam consectetur diam purus, sit amet dapibus libero facilisis quis. Donec sit amet tincidunt lectus, quis venenatis metus. Sed vestibulum tincidunt efficitur. In sed pharetra lacus. Aenean malesuada ultricies mauris, at sagittis erat vulputate sed. Etiam sit amet justo sit amet sem egestas varius nec quis magna. Duis a turpis volutpat diam fringilla porta vitae vel dolor. Ut aliquet feugiat arcu, ac pellentesque sapien placerat eget. Fusce ornare vitae tortor sed efficitur. Phasellus sodales elit quis ex varius, et vestibulum nunc convallis. Praesent nec felis lacinia, pharetra urna id, imperdiet mauris. Maecenas tortor felis, dignissim a quam vitae, dictum sollicitudin velit. Morbi molestie nulla finibus, vulputate tellus sit amet, accumsan arcu. \nQuisque mollis risus erat, vel luctus metus auctor vel. Pellentesque posuere massa a risus maximus vehicula. Proin lacinia urna vel ligula ornare, nec laoreet est eleifend. Quisque sit amet lectus ornare justo laoreet finibus at sit amet justo. Cras a augue sed lectus elementum sollicitudin. Vestibulum vitae arcu ac nisi blandit sagittis sed non ex. Pellentesque erat nunc, condimentum quis dignissim eget, vestibulum vel tortor. Nam id gravida massa, in varius dui. Pellentesq'
 
 }
 
-print.atestado(atest)
+/*print.atestado(atest)
 	.then(input => console.log('done.'))
 .catch(e=>{
 	console.log(e)
-})
+})*/

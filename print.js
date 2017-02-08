@@ -234,7 +234,7 @@ exports.scheduleProtocol = function(data, options) {
 		})
 		.then(input => {
 			return helper.text(input.doc, {
-				txtArray: data.address ? helper.paginateString(data.address, 84).slice(0, 4) : "",
+				txtArray: data.address ? helper.paginateString(input.doc, data.address, 160*wConverter).slice(0, 3) : "",
 				x: (settings.leftMargin + 4) * wConverter,
 				y: 121,
 				fontSize: settings.contentFontSize,
@@ -267,7 +267,7 @@ exports.scheduleProtocol = function(data, options) {
 		})
 		.then(input => {
 			return helper.text(input.doc, {
-				txtArray: data.recommendations ? helper.paginateString(data.recommendations, 84).slice(0, 27) : "",
+				txtArray: data.recommendations ? helper.paginateString(input.doc, data.recommendations, 160*wConverter).slice(0, 25) : "",
 				x: (settings.leftMargin + 4) * wConverter,
 				y: 155,
 				fontSize: settings.contentFontSize,
@@ -465,7 +465,7 @@ exports.receipt = function(data, options) {
 		})
 		.then(input => {
 			return helper.text(input.doc, {
-				txtArray: R.path(['contractor', 'address'], data) ? helper.paginateString(data.contractor.address, 84).slice(0, 2) : "",
+				txtArray: R.path(['contractor', 'address'], data) ? helper.paginateString(input.doc, data.contractor.address, 167*wConverter).slice(0, 2) : "",
 				x: (settings.leftMargin + 2) * wConverter,
 				y: 77,
 				fontSize: settings.contentFontSize,
@@ -608,7 +608,7 @@ exports.receipt = function(data, options) {
 		})
 		.then(input => {
 			return helper.text(input.doc, {
-				txtArray: R.path(['patient', 'address'], data) ? helper.paginateString(data.patient.address, 84).slice(0, 2) : "",
+				txtArray: R.path(['patient', 'address'], data) ? helper.paginateString(input.doc, data.patient.address, 167*wConverter).slice(0, 2) : "",
 				x: (settings.leftMargin + 2) * wConverter,
 				y: (settings.topMargin + 87 + 8 + 17 + 17 + 10) * hConverter,
 				fontSize: settings.contentFontSize,
@@ -718,7 +718,7 @@ exports.receipt = function(data, options) {
 				w: (132) * wConverter,
 				h: 12 * hConverter,
 				header: {
-					text: (data.procedures && data.procedures[0] && data.procedures[0].procedureName) ? helper.paginateString(data.procedures[0].procedureName,74).slice(0, 2) : "",
+					text: (data.procedures && data.procedures[0] && data.procedures[0].procedureName) ? helper.paginateString(input.doc, data.procedures[0].procedureName,125*wConverter).slice(0, 2) : "",
 					fontSize: settings.headerFontSize,
 					fontStyle: settings.contentFontStyle,
 					fontFamily: settings.contentFont,
@@ -735,7 +735,7 @@ exports.receipt = function(data, options) {
 				w: (25) * wConverter,
 				h: 6.5 * hConverter,
 				header: {
-					text: (data.procedures && data.procedures[0] && data.procedures[0].value) ? helper.paginateString(data.procedures[0].value,52).slice(0, 2) : "",
+					text: (data.procedures && data.procedures[0] && data.procedures[0].value) ? helper.paginateString(input.doc, data.procedures[0].value,30*wConverter).slice(0, 2) : "",
 					fontSize: settings.headerFontSize,
 					fontStyle: settings.contentFontStyle,
 					fontFamily: settings.contentFont,
@@ -770,7 +770,7 @@ exports.receipt = function(data, options) {
 				w: (132) * wConverter,
 				h: 12 * hConverter,
 				header: {
-					text: (data.procedures && data.procedures[1] && data.procedures[1].procedureName) ? helper.paginateString(data.procedures[1].procedureName,74).slice(0, 2) : "",
+					text: (data.procedures && data.procedures[1] && data.procedures[1].procedureName) ? helper.paginateString(input.doc, data.procedures[1].procedureName,125*wConverter).slice(0, 2) : "",
 					fontSize: settings.headerFontSize,
 					fontStyle: settings.contentFontStyle,
 					fontFamily: settings.contentFont,
@@ -787,7 +787,7 @@ exports.receipt = function(data, options) {
 				w: (25) * wConverter,
 				h: 6.5 * hConverter,
 				header: {
-					text: (data.procedures && data.procedures[1] && data.procedures[1].value) ? helper.paginateString(data.procedures[1].value,52).slice(0, 2) : "",
+					text: (data.procedures && data.procedures[1] && data.procedures[1].value) ? helper.paginateString(input.doc, data.procedures[1].value,30*wConverter).slice(0, 2) : "",
 					fontSize: settings.headerFontSize,
 					fontStyle: settings.contentFontStyle,
 					fontFamily: settings.contentFont,
@@ -823,7 +823,7 @@ exports.receipt = function(data, options) {
 				w: (132) * wConverter,
 				h: 12 * hConverter,
 				header: {
-					text: (data.procedures && data.procedures[2] && data.procedures[2].procedureName) ? helper.paginateString(data.procedures[2].procedureName,74).slice(0, 2) : "",
+					text: (data.procedures && data.procedures[2] && data.procedures[2].procedureName) ? helper.paginateString(input.doc, data.procedures[2].procedureName,125*wConverter).slice(0, 2) : "",
 					fontSize: settings.headerFontSize,
 					fontStyle: settings.contentFontStyle,
 					fontFamily: settings.contentFont,
@@ -840,7 +840,7 @@ exports.receipt = function(data, options) {
 				w: (25) * wConverter,
 				h: 6.5 * hConverter,
 				header: {
-					text: (data.procedures && data.procedures[2] && data.procedures[2].value) ? helper.paginateString(data.procedures[2].value,52).slice(0, 2) : "",
+					text: (data.procedures && data.procedures[2] && data.procedures[2].value) ? helper.paginateString(input.doc, data.procedures[2].value,30*wConverter).slice(0, 2) : "",
 					fontSize: settings.headerFontSize,
 					fontStyle: settings.contentFontStyle,
 					fontFamily: settings.contentFont,
@@ -875,7 +875,7 @@ exports.receipt = function(data, options) {
 				w: (132) * wConverter,
 				h: 12 * hConverter,
 				header: {
-					text: (data.procedures && data.procedures[3] && data.procedures[3].procedureName) ? helper.paginateString(data.procedures[3].procedureName,74).slice(0, 2): "",
+					text: (data.procedures && data.procedures[3] && data.procedures[3].procedureName) ? helper.paginateString(input.doc, data.procedures[3].procedureName,125*wConverter).slice(0, 2): "",
 					fontSize: settings.headerFontSize,
 					fontStyle: settings.contentFontStyle,
 					fontFamily: settings.contentFont,
@@ -892,7 +892,7 @@ exports.receipt = function(data, options) {
 				w: (25) * wConverter,
 				h: 6.5 * hConverter,
 				header: {
-					text: (data.procedures && data.procedures[3] && data.procedures[3].value) ? helper.paginateString(data.procedures[3].value,52).slice(0, 2) : "",
+					text: (data.procedures && data.procedures[3] && data.procedures[3].value) ? helper.paginateString(input.doc, data.procedures[3].value,30*wConverter).slice(0, 2) : "",
 					fontSize: settings.headerFontSize,
 					fontStyle: settings.contentFontStyle,
 					fontFamily: settings.contentFont,
@@ -927,7 +927,7 @@ exports.receipt = function(data, options) {
 				w: (132) * wConverter,
 				h: 12 * hConverter,
 				header: {
-					text: (data.procedures && data.procedures[4] && data.procedures[4].procedureName) ? helper.paginateString(data.procedures[4].procedureName,74).slice(0, 2) : "",
+					text: (data.procedures && data.procedures[4] && data.procedures[4].procedureName) ? helper.paginateString(input.doc ,data.procedures[4].procedureName,125*wConverter).slice(0, 2) : "",
 					fontSize: settings.headerFontSize,
 					fontStyle: settings.contentFontStyle,
 					fontFamily: settings.contentFont,
@@ -944,7 +944,7 @@ exports.receipt = function(data, options) {
 				w: (25) * wConverter,
 				h: 6.5 * hConverter,
 				header: {
-					text: (data.procedures && data.procedures[4] && data.procedures[4].value) ? helper.paginateString(data.procedures[4].value,52).slice(0, 2) : "",
+					text: (data.procedures && data.procedures[4] && data.procedures[4].value) ? helper.paginateString(input.doc, data.procedures[4].value,30*wConverter).slice(0, 2) : "",
 					fontSize: settings.headerFontSize,
 					fontStyle: settings.contentFontStyle,
 					fontFamily: settings.contentFont,
@@ -1191,7 +1191,7 @@ exports.specialPrescription = function(data, options) {
 		})
 		.then(input => {
 			return helper.text(input.doc, {
-				txtArray: R.path(['issuer', 'address'], data) ? helper.paginateString(data.issuer.address, 80).slice(0,2) : "",
+				txtArray: R.path(['issuer', 'address'], data) ? helper.paginateString(input.doc,data.issuer.address, 167 * wConverter).slice(0,2) : "",
 				x: (settings.leftMargin + 2) * wConverter,
 				y: (settings.topMargin + 47) * hConverter,
 				fontSize: settings.contentFontSize,
@@ -1248,7 +1248,7 @@ exports.specialPrescription = function(data, options) {
 		})
 		.then(input => {
 			return helper.text(input.doc, {
-				txtArray: R.path(['patient', 'address'], data) ? helper.paginateString(data.patient.address, 80).slice(0, 2) : "",
+				txtArray: R.path(['patient', 'address'], data) ? helper.paginateString(input.doc, data.patient.address, 167*wConverter).slice(0, 2) : "",
 				x: (settings.leftMargin + 2) * wConverter,
 				y: (settings.topMargin + 90) * hConverter,
 				fontSize: settings.contentFontSize,
@@ -1276,7 +1276,7 @@ exports.specialPrescription = function(data, options) {
 		})
 		.then(input => {
 			return helper.text(input.doc, {
-				txtArray: data.prescription ? helper.paginateString(data.prescription, 94).slice(0,12) : "",
+				txtArray: data.prescription ? helper.paginateString(input.doc,data.prescription, 167*wConverter).slice(0,11) : "",
 				x: (settings.leftMargin + 2) * wConverter,
 				y: (settings.topMargin + 113) * hConverter,
 				fontSize: settings.contentFontSize,
@@ -1624,7 +1624,7 @@ exports.prescription = function(data, options) {
 		})
 		.then(input => {
 			return helper.text(input.doc, {
-				txtArray: R.path(['issuer', 'address'], data) ? helper.paginateString(data.issuer.address, 80).slice(0,2) : "",
+				txtArray: R.path(['issuer', 'address'], data) ? helper.paginateString(input.doc,data.issuer.address, 167 * wConverter).slice(0,2) : "",
 				x: (settings.leftMargin + 2) * wConverter,
 				y: (settings.topMargin + 47) * hConverter,
 				fontSize: settings.contentFontSize,
@@ -1666,35 +1666,7 @@ exports.prescription = function(data, options) {
 				x: (settings.leftMargin) * wConverter,
 				y: (settings.topMargin + 80) * hConverter,
 				w: (210 - 2 * settings.leftMargin) * wConverter,
-				h: 21 * hConverter,
-				header: {
-					text: 'ENDERECO',
-					fontSize: settings.headerFontSize,
-					fontStyle: settings.headerStyle,
-					fontFamily: settings.headerFont,
-					padding: settings.headerPadding,
-				},
-				style: {
-					borderColor: settings.borderColor,
-				},
-			})
-		})
-		.then(input => {
-			return helper.text(input.doc, {
-				txtArray: R.path(['patient', 'address'], data) ? helper.paginateString(data.patient.address, 80).slice(0, 2) : "",
-				x: (settings.leftMargin + 2) * wConverter,
-				y: (settings.topMargin + 90) * hConverter,
-				fontSize: settings.contentFontSize,
-				fontStyle: settings.contentFontStyle,
-				fontFamily: settings.contentFont,
-			})
-		})
-		.then(input => {
-			return helper.formBox(input.doc, {
-				x: (settings.leftMargin) * wConverter,
-				y: (settings.topMargin + 103) * hConverter,
-				w: (210 - 2 * settings.leftMargin) * wConverter,
-				h: 150 * hConverter,
+				h: 170 * hConverter,
 				header: {
 					text: 'PRESCRIÇÃO',
 					fontSize: settings.headerFontSize,
@@ -1709,9 +1681,9 @@ exports.prescription = function(data, options) {
 		})
 		.then(input => {
 			return helper.text(input.doc, {
-				txtArray: data.prescription ? helper.paginateString(data.prescription, 94).slice(0,12) : "",
+				txtArray: data.prescription ? helper.paginateString(input.doc, data.prescription, 167*wConverter).slice(0,30) : "",
 				x: (settings.leftMargin + 2) * wConverter,
-				y: (settings.topMargin + 113) * hConverter,
+				y: (settings.topMargin + 93) * hConverter,
 				fontSize: settings.contentFontSize,
 				fontStyle: settings.contentFontStyle,
 				fontFamily: settings.contentFont,
@@ -1822,7 +1794,7 @@ exports.atestado = function(data, options) {
 				x: (settings.leftMargin) * wConverter,
 				y: (settings.topMargin + 23) * hConverter,
 				w: (210 - 2 * settings.leftMargin) * wConverter,
-				h: 38 * hConverter,
+				h: 32 * hConverter,
 
 				style: {
 					borderColor: settings.borderColor
@@ -1870,30 +1842,10 @@ exports.atestado = function(data, options) {
 			})
 		})
 		.then(input => {
-			return helper.formBox(input.doc, {
-				x: (settings.leftMargin + 2) * wConverter,
-				y: (settings.topMargin + 39) * hConverter,
-				w: (210 - 2 * settings.leftMargin - 4) * wConverter,
-				h: 8 * hConverter,
-
-				content: {
-					text: R.path(['issuer', 'phone'], data) ? data.issuer.phone.slice(0, 60) : '',
-					fontSize: settings.contentFontSize,
-					fontStyle: settings.contentFontStyle,
-					fontFamily: settings.contentFont,
-					padding: settings.contentPadding,
-					align: 'center'
-				},
-				style: {
-					borderColor: settings.blankBorder
-				},
-			})
-		})
-		.then(input => {
 			return helper.text(input.doc, {
-				txtArray: R.path(['issuer', 'address'], data) ? helper.paginateString(data.issuer.address, 80).slice(0,2) : "",
+				txtArray: R.path(['issuer', 'address'], data) ? helper.paginateString(input.doc,data.issuer.address, 167*wConverter).slice(0,2) : "",
 				x: (settings.leftMargin + 2) * wConverter,
-				y: (settings.topMargin + 47) * hConverter,
+				y: (settings.topMargin + 41) * hConverter,
 				fontSize: settings.contentFontSize,
 				fontStyle: settings.contentFontStyle,
 				fontFamily: settings.contentFont,
@@ -1906,7 +1858,7 @@ exports.atestado = function(data, options) {
 	.then(input => {
 			return helper.formBox(input.doc, {
 				x: (settings.leftMargin) * wConverter,
-				y: (settings.topMargin + 63) * hConverter,
+				y: (settings.topMargin + 57) * hConverter,
 				w: (210 - 2 * settings.leftMargin) * wConverter,
 				h: 15 * hConverter,
 				header: {
@@ -1931,37 +1883,9 @@ exports.atestado = function(data, options) {
 		.then(input => {
 			return helper.formBox(input.doc, {
 				x: (settings.leftMargin) * wConverter,
-				y: (settings.topMargin + 80) * hConverter,
+				y: (settings.topMargin + 74) * hConverter,
 				w: (210 - 2 * settings.leftMargin) * wConverter,
-				h: 21 * hConverter,
-				header: {
-					text: 'ENDERECO',
-					fontSize: settings.headerFontSize,
-					fontStyle: settings.headerStyle,
-					fontFamily: settings.headerFont,
-					padding: settings.headerPadding,
-				},
-				style: {
-					borderColor: settings.borderColor,
-				},
-			})
-		})
-		.then(input => {
-			return helper.text(input.doc, {
-				txtArray: R.path(['patient', 'address'], data) ? helper.paginateString(data.patient.address, 80).slice(0, 2) : "",
-				x: (settings.leftMargin + 2) * wConverter,
-				y: (settings.topMargin + 90) * hConverter,
-				fontSize: settings.contentFontSize,
-				fontStyle: settings.contentFontStyle,
-				fontFamily: settings.contentFont,
-			})
-		})
-		.then(input => {
-			return helper.formBox(input.doc, {
-				x: (settings.leftMargin) * wConverter,
-				y: (settings.topMargin + 103) * hConverter,
-				w: (210 - 2 * settings.leftMargin) * wConverter,
-				h: 150 * hConverter,
+				h: 170 * hConverter,
 				header: {
 					text: 'ATESTADO',
 					fontSize: settings.headerFontSize,
@@ -1976,9 +1900,9 @@ exports.atestado = function(data, options) {
 		})
 		.then(input => {
 			return helper.text(input.doc, {
-				txtArray: data.atestado ? helper.paginateString(data.atestado, 94).slice(0,23) : "",
+				txtArray: data.atestado ? helper.paginateString(input.doc, data.atestado, 167*wConverter).slice(0,30) : "",
 				x: (settings.leftMargin + 2) * wConverter,
-				y: (settings.topMargin + 113) * hConverter,
+				y: (settings.topMargin + 86) * hConverter,
 				fontSize: settings.contentFontSize,
 				fontStyle: settings.contentFontStyle,
 				fontFamily: settings.contentFont,

@@ -29,7 +29,7 @@ function normalizeTextInput(input) {
 	input.pageWidth = input.doc.internal.pageSize.width
 	input.fontSize = input.doc.internal.getFontSize()
 	input.textWidth = input.options.txtArray.map(txt => input.doc.getStringUnitWidth(txt) * input.fontSize / input.doc.internal.scaleFactor)
-	input.textHeigth = input.options.txtArray.map(txt => input.fontSize * 0.328) // 0.3528 = mm/pt
+	input.textHeigth = input.options.txtArray.map(txt => input.fontSize * 0.3528) // 0.3528 = mm/pt
 	input.xCoord = input.textWidth.map(w => input.options.x)
 	input.yCoord = input.textHeigth.map((h, index) => {
 		if (index > 0) {
@@ -216,7 +216,7 @@ function saveDoc(input) {
 }
 
 
-function paginateString(string, maxLineSize) {
+/*function paginateString(string, maxLineSize) {
 	const spaceSplit = string.replace( /\n/g, " $newline " ).split( " " )
 	const validArray = []
 	const resultArray = []
@@ -255,6 +255,49 @@ function paginateString(string, maxLineSize) {
 
 	return resultArray
 
+}*/
+
+
+function paginateString(doc, string, maxLineSize) {
+	const spaceSplit = string.replace( /\n/g, " $newline " ).split( " " )
+	const validArray = []
+	const resultArray = []
+	spaceSplit.forEach((word) => {
+		let substringSize = 0
+		word.split('').reduce((acc, curr, index) => {
+			if (substringSize >= maxLineSize) {
+				substringSize = 0
+				validArray.push(acc)
+				return acc = ''
+			} else {
+				if(index === word.length-1) validArray.push(acc + curr)
+				substringSize = doc.getStringUnitWidth(acc + curr) * doc.internal.getFontSize() / doc.internal.scaleFactor
+				return acc = acc + curr
+			}
+
+		}, '')
+	})
+	const reduction = validArray.reduce((acc, curr, index)=>{
+		//let lineSize = acc.length + curr.length +1
+		let lineSize = doc.getStringUnitWidth(acc + curr + ' ') * doc.internal.getFontSize() / doc.internal.scaleFactor			
+		if(curr === '$newline'){
+			resultArray.push(acc)
+			return acc =""
+		}
+		if(lineSize >= maxLineSize){
+			resultArray.push(acc)
+			return acc = curr
+		} else {
+			if(index === validArray.length -1){ 
+				
+				resultArray.push(acc + ' ' + curr)
+			}
+			return acc = acc.length>0 ?  acc + ' ' + curr : curr
+		}
+	},'')
+
+	return resultArray
+
 }
 
 function clone(array) {
@@ -267,5 +310,5 @@ module.exports = {
 	print,
 	saveDoc,
 	formBox,
-	paginateString
+	paginateString,
 }
